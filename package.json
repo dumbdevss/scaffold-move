@@ -1,0 +1,52 @@
+{
+  "name": "@dumbdevs/scaffold-move",
+  "version": "1.2.0",
+  "description": "Scaffold generator for Movement Labs DApps in TypeScript",
+  "main": "dist/index.js",
+  "bin": {
+    "scaffold-move": "./dist/bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc && npm run copy-templates",
+    "copy-templates": "ts-node src/copyTemplates.ts",
+    "start": "node ./dist/bin/cli.js",
+    "dev": "ts-node ./src/bin/cli.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dumbdevss/scaffold-move.git"
+  },
+  "keywords": [
+    "Move",
+    "Scaffold",
+    "Movement Labs",
+    "CLI",
+    "Blockchain",
+    "Web3",
+    "Smart Contracts",
+    "DApp",
+    "Scaffold-Move"
+  ],
+  "author": "DumbDevs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dumbdevss/scaffold-move/issues"
+  },
+  "homepage": "https://github.com/dumbdevss/scaffold-move#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.0.0",
+    "fs-extra": "^11.2.0",
+    "handlebars": "^4.7.8",
+    "inquirer": "^8.2.6"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/handlebars": "^4.1.0",
+    "@types/inquirer": "^8.2.6",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  }
+}

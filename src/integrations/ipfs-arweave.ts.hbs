@@ -1,0 +1,10 @@
+import { create } from 'ipfs-http-client';
+
+const ipfs = create({ url: 'http://localhost:5001' });
+
+const uploadToIPFS = async (data: string | Buffer): Promise<void> => {
+  const { cid } = await ipfs.add(data);
+  console.log('IPFS CID:', cid.toString());
+};
+
+export default uploadToIPFS;

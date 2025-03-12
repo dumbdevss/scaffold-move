@@ -1,0 +1,9 @@
+import { PythHttpClient } from 'pyth-sdk-js';
+
+const initPyth = async (): Promise<void> => {
+  const pythClient = new PythHttpClient('https://pyth.network/api');
+  const priceData = await pythClient.getPriceFeeds();
+  console.log('Pyth Price Data:', priceData);
+};
+
+export default initPyth;
